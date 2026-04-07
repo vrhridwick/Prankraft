@@ -34,7 +34,7 @@ const checkboxItems = [
 ]
 
 export default function CaptchaPage() {
-  const navigate = useNavigate()
+//   const navigate = useNavigate()
   const [round, setRound] = useState(0)
   const [selected, setSelected] = useState([])
   const [checked, setChecked] = useState([])
