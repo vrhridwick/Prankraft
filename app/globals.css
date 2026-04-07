@@ -103,3 +103,135 @@
 .glow-orange {
   box-shadow: 0 0 60px 30px rgba(255, 107, 53, 0.3);
 }
+/* ========== GRAVITY PHYSICS ========== */
+@keyframes gravityFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+.gravity-fall {
+  animation: gravityFall 1.2s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+/* ========== GLITCH EFFECT ========== */
+@keyframes glitch1 {
+  0%   { clip-path: inset(0 0 95% 0); transform: translate(-3px, 0); }
+  25%  { clip-path: inset(30% 0 50% 0); transform: translate(3px, 0); }
+  50%  { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 0); }
+  75%  { clip-path: inset(80% 0 5% 0); transform: translate(2px, 0); }
+  100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+}
+
+@keyframes glitch2 {
+  0%   { clip-path: inset(50% 0 30% 0); transform: translate(3px, 0); filter: hue-rotate(90deg); }
+  50%  { clip-path: inset(10% 0 70% 0); transform: translate(-3px, 0); filter: hue-rotate(180deg); }
+  100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+}
+
+.glitch-overlay::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  animation: glitch1 0.15s infinite;
+  color: #ff0040;
+}
+
+.glitch-overlay::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  animation: glitch2 0.15s infinite;
+  color: #00ffff;
+}
+
+/* ========== SCREEN SHAKE ========== */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-8px, -8px) rotate(-1deg); }
+  20% { transform: translate(8px, 8px) rotate(1deg); }
+  30% { transform: translate(-8px, 4px) rotate(0deg); }
+  40% { transform: translate(8px, -4px) rotate(1deg); }
+  50% { transform: translate(-4px, 8px) rotate(-1deg); }
+  60% { transform: translate(4px, -8px) rotate(0deg); }
+  70% { transform: translate(-8px, 4px) rotate(-1deg); }
+  80% { transform: translate(8px, 4px) rotate(1deg); }
+  90% { transform: translate(-4px, -4px) rotate(0deg); }
+}
+
+.screen-shake {
+  animation: screenShake 0.5s ease-in-out;
+}
+
+/* ========== THERAPY FADE IN ========== */
+@keyframes therapyFadeIn {
+  0% { opacity: 0; transform: scale(1.05); filter: blur(8px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+.therapy-reveal {
+  animation: therapyFadeIn 2s ease-out forwards;
+}
+
+/* ========== BREATHING CIRCLE ========== */
+@keyframes breatheIn {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+.breathe-circle {
+  animation: breatheIn 4s ease-in-out infinite;
+}
+
+/* ========== LOADING BAR STUTTER ========== */
+@keyframes stutterAt99 {
+  0%   { width: 99%; }
+  25%  { width: 97%; }
+  50%  { width: 99%; }
+  75%  { width: 98%; }
+  100% { width: 99%; }
+}
+
+.loading-stutter {
+  animation: stutterAt99 0.4s ease-in-out infinite;
+}
+
+/* ========== CART ITEM FLY ========== */
+@keyframes flyToCart {
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(300px, -200px) scale(0.2); opacity: 0; }
+}
+
+.fly-to-cart {
+  animation: flyToCart 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ========== TYPEWRITER ========== */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #7c5cbf;
+  animation: typewriter 2s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* ========== AMBIENT GRADIENT (Therapy page) ========== */
+@keyframes ambientGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.therapy-bg {
+  background: linear-gradient(-45deg, #e8d5f5, #d5e8f5, #d5f5e8, #f5e8d5);
+  background-size: 400% 400%;
+  animation: ambientGradient 8s ease infinite;
+}
