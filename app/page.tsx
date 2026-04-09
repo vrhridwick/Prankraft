@@ -9,5 +9,7 @@ export default function Home() {
      router.push("/checkout/verify")
   }
 
-  return <CraveMate onCheckout={handleCheckout} />
+  return (
+  <div className="food-theme"><CraveMate onCheckout={handleCheckout}/>
+  </div> )
 }

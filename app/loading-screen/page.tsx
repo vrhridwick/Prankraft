@@ -4,17 +4,17 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 
 const messages = [
-  { pct: 0,   text: "Connecting to servers..." },
-  { pct: 12,  text: "Fetching your order details..." },
-  { pct: 27,  text: "Verifying payment information..." },
-  { pct: 41,  text: "Contacting the restaurant..." },
-  { pct: 55,  text: "Rethinking your life choices..." },
-  { pct: 63,  text: "Reviewing your recent decisions..." },
-  { pct: 71,  text: "Consulting with professionals..." },
-  { pct: 83,  text: "Preparing something you actually need..." },
-  { pct: 91,  text: "Almost there... we promise..." },
-  { pct: 97,  text: "Gathering your courage..." },
-  { pct: 99,  text: "This might sting a little..." },
+  { pct: 0,   text: "Initializing secure checkout..." },
+  { pct: 12,  text: "Validating items in your cart..." },
+  { pct: 27,  text: "Calculating taxes and delivery fees..." },
+  { pct: 41,  text: "Applying best available promotions..." },
+  { pct: 55,  text: "Checking restaurant operating hours..." },
+  { pct: 63,  text: "Verifying delivery address coverage..." },
+  { pct: 71,  text: "Updating your loyalty reward points..." },
+  { pct: 83,  text: "Loading secure payment methods..." },
+  { pct: 91,  text: "Preparing encrypted payment gateway..." },
+  { pct: 97,  text: "Finalizing your total..." },
+  { pct: 99,  text: "Redirecting to payment..." },
 ]
 
 export default function LoadingScreen() {
@@ -70,7 +70,7 @@ export default function LoadingScreen() {
 
       {/* Logo stays from food app */}
       <div className="text-orange-500 font-bold text-2xl mb-4">
-        🍕 CraveMate
+        🍕 FoodCrave
       </div>
 
       {/* Progress container */}

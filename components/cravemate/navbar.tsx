@@ -41,7 +41,8 @@ export function Navbar({ cartItemCount, onCartClick }: NavbarProps) {
           {/* Location */}
           <button className="hidden sm:flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
             <MapPin className="h-4 w-4" />
-            <span className="hidden lg:inline">Location</span>
+            <span  onClick={handleCheckoutClick} className="hidden lg:inline">Location</span>
+          
           </button>
 
           {/* Cart */}

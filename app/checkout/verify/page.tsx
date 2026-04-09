@@ -70,7 +70,7 @@ export default function CaptchaPage() {
     setError("")
 
     setTimeout(() => {
-      setIsVerifying(false)
+      // setIsVerifying(false)
 
       if (round < rounds.length - 1) {
         triggerShake()
@@ -80,6 +80,7 @@ export default function CaptchaPage() {
           setSelected([])
           setChecked([])
           setError("")
+          setIsVerifying(false)
         }, 1500)
       } else {
         setError(failMessages[3])
