@@ -22,7 +22,7 @@ The user goes through the same 5-act story:
         Looks 100% real. No hints of anything unusual.
         ↓
 🤖  Act 2 — The Infinite CAPTCHA
-        Click "Proceed to Checkout" and get hit with a fake reCAPTCHA v3 flow.
+        Click "Proceed to Checkout" or "Sign in" and get hit with a fake reCAPTCHA v3 flow.
         4 rounds of increasingly absurd image grids and checkbox confirmations.
         Always fails. Every single time.
         ↓
