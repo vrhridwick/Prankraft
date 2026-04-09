@@ -134,6 +134,12 @@ A multi-act narrative prank that tells a complete story. The user's emotional ar
 
 ---
 
+## 👥 Team
+
+Built with ❤️ at Prankraft 2026
+
+---
+
 ## 📄 License
 
 MIT License — feel free to learn from it, but maybe don't order food from it.
